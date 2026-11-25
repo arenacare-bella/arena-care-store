@@ -1,0 +1,6 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arena Care</title><link rel="stylesheet" href="style.css"></head><body style="margin:0"><div id="root">جاري التحميل...</div><script>
+(async()=>{try{const n=3;let s='';for(let i=0;i<n;i++){s+=await (await fetch('p'+i+'.txt')).text();}
+const b=Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const t=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+const e=document.createElement('script');e.textContent=t;document.body.appendChild(e);}catch(x){document.getElementById('root').textContent='تعذر التحميل';}})();
+</script></body></html>
